@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=1024" />
+        <title>classify weibo</title>
+        <link rel="shortcut icon" href="favicon.png" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+        <link href="./lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"/>
+        <script src="./lib/jquery-1.8.0.min.js"  type="text/javascript"></script>
+        <script src="./lib/bootstrap/js/bootstrap.js"></script>
+        <script src="./lib/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"  type="text/javascript"></script>
+    </head>
+
+    <body>
+        <style type="text/css">
+            html{
+                background: #FDFDFC;
+            }
+            .slide{
+                width: 750px;
+                height: 600px;
+                padding: 20px;
+            }
+            .bdr{
+                border: solid 1px gray;
+                box-shadow: 2px 2px 10px #E7E7E7;
+            }
+            .center{
+                text-align: center;
+            }
+            .content .item{
+                color: white; 
+                border: 1px solid #106094;
+                -moz-border-radius: 4px;
+                -webkit-border-radius: 4px;
+                padding: 3px;
+                font-size: 20px;
+                border-radius: 4px;
+                width: 450px;
+                padding: 15px;
+                margin: 20px;
+                -moz-background-clip: padding;
+                -webkit-background-clip: padding-box;
+                background-clip: padding-box;
+                background-color: white;
+                -moz-box-shadow: inset 0 0 3px rgba(255,255,255,.33);
+                -webkit-box-shadow: inset 0 0 3px rgba(255, 255, 255, .33);
+                box-shadow: inset 0 0 3px rgba(255, 255, 255, .33);
+                background-image: -moz-linear-gradient(bottom,#1B81C3 0,#3B99D6 100%);
+                background-image: -o-linear-gradient(bottom,#1B81C3 0,#3B99D6 100%);
+                background-image: -webkit-linear-gradient(bottom,#1B81C3 0,#3B99D6 100%);
+                background-image: linear-gradient(bottom,#1B81C3 0,#3B99D6 100%);
+            }
+            .content .cur{
+                font-size: 30px;
+                padding: 25px;
+                color:#fe0000;
+            }
+            .font3{
+                font-size: 24px;
+                line-height: 30px;
+            }
+            .font-large{
+                font-size: 60px;
+                color: green;
+                font-weight: bold;
+                text-align: center;
+            }
+
+        </style>
+        <div id="impress">
+
+            <!-- 第一页 -->
+            <div id="title" class="step slide" data-x="0" data-y="0" >
+                <div class="row-fluid">
+                    <div class="span12"></div>
+                    <div class="span12"></div>
+                </div>
+                <h1 class="center">Advertisement Classification <br>Based on Naive Bayes Classier</h1>
+                <hr>
+                <div class="row-fluid">
+                    <div class="span12"></div>
+                    <div class="span12"></div>
+                    <div class="span12"></div>
+                </div>
+                <h2 class = "center">Group Five<br>December 14, 2012</h2>
+                <h3 class="center"><strong >李冠贤, 梁展瑞 , 陈学家  ,李晋贤 , 何钰莹</strong></h3>	
+            </div>
+
+
+            <!-- 介绍 -->
+            <div  class="step slide" data-x="-1000" data-y="-1500">
+                <blockquote>
+                    <h2>CONTENT</h2>
+                </blockquote>
+                <hr>
+                <div class="row-fluid">
+                    <div class="span8 offset2">
+                        <div class="content">
+                            <div class="item cur">Object</div>
+                            <div class="item">Analysis And Design</div>
+                            <div class="item">Implementation</div>
+                            <div class="item">Result</div>
+                            <div class="item">Summary</div>
+                        </div>
+                    </div>
+                </div>		
+            </div>
+
+            <!-- Object -->
+            <div class="step slide" data-x="0" data-y="-1500">
+                <blockquote>
+                    <h2>Objective</h2>
+                </blockquote>
+                <hr>
+                <div class="row-fluid">
+                    <div class="span10 offset1">
+                        <p class="font3">
+                        &nbsp; &nbsp; There are plenty of advertising twitters such  
+                        as selling clothes, shoes, cosmetics and some  
+                        other products. Sometimes we want to ignore these  
+                        kinds of twitters.
+                        </p>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12"></div>
+                        <div class="span12"></div>
+                        <div class="span12"></div>
+                    </div>
+                    <p class="font-large">
+                    ------ Object
+                    </p>
+                    <div class="span10 offset1">
+
+                        <br>
+                        <h2 class="center">
+                            Advertisement Classification Based on Naive Bayes Classie
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- design -->
+            <div class="step slide bdr" data-x="1000" data-y="-1500">
+                <blockquote>
+                    <h2>Analysis And Design</h2>
+                </blockquote>
+                <hr>
+                <div class="row-fluid">
+                    <div class="span10 offset1">
+
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span10 offset1">
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Algorithm-->
+            <div class="step slide bdr" data-x="1800" data-y="-1500">
+                <blockquote>
+                    <h1> Naive Bayes Classifier </h1>
+                </blockquote>
+                <hr>
+                <h2>功能</h2>
+                <p>根据从条目中提取的特征量, 利用知识库基于概率猜测条目最可能属于的分类</p>
+                <h2>前期准备</h2>
+                <p> 人工分类得出知识库, 预先定义好特征集 </p>
+                <h2>原理</h2>
+                <p>
+                将分类器看成一个函数 $ i = f(X) $, 其中i为得到的分类, $ X = \{a_1, a_2, \cdots, a_m \} $
+                为特征集.
+                </p>
+
+            </div>
+
+            <!--分类-->
+            <div class="step slide bdr" data-x="1800" data-y="-2400">
+                <blockquote>
+                    <h1> 分类</h1>
+                </blockquote>
+                <hr>
+                <div class="row-fluid">
+                    <div class="span4">
+                        <table class="table table-bordered table-hover table-striped table-condensed">
+                            <caption>属性集</caption>
+                            <thead>
+                                <tr> <th>属性名</th> <th>意义</th> </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>date</td><td>weibo发出时的hour</td></tr>
+                                <tr><td>uid</td><td>用户ID</td></tr>
+                                <tr><td>word</td><td>关键词列表</td></tr>
+                                <tr><td>has_img</td><td>有无图片</td></tr>
+                                <tr><td>has_video</td><td>有无视频</td></tr>
+                                <tr><td>link_site</td><td>超链接指向的网站,没有则为空</td></tr>
+                                <tr><td>has_number</td><td>有无数字</td></tr>
+                                <tr><td>forward_num</td><td>转发数(最里层)</td></tr>
+                                <tr><td>reply_num</td><td>回复数</td></tr>
+                                <tr><td>like_num</td><td>喜欢数</td></tr>
+                                <tr><td>text_len</td><td>正文长度</td></tr>
+                                <tr><td>client</td><td>所用客户端</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="span7 offset1">
+                        <!--
+                        数值类型 | 包括 | 处理方法
+                        bool | has_img, has_video, has_number | 直接计数
+                        integer | reply_num, forward_num, like_num, text_len | 插值加区间积分平滑
+                        small integer | date | 直接计数
+                        string | uid, client, link_site | 直接计数
+                        word list| word | 特殊处理,后面解释
+                        -->
+
+                        <table class="table table-bordered table-hover table-striped">
+                            <caption>分类</caption>
+                            <thead>
+                                <tr><td>数值类型</td><td>包括</td><td>处理方法</td></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>bool</td><td>has_img, has_video, has_number</td><td>直接计数</td></tr>
+                                <tr><td>integer</td><td>reply_num, forward_num, like_num, text_len</td><td>插值加区间积分平滑</td></tr>
+                                <tr><td>small integer</td><td>date</td><td>直接计数</td></tr>
+                                <tr><td>string</td><td>uid, client, link_site</td><td>直接计数</td></tr>
+                                <tr><td>word list</td><td>word</td><td>特殊处理,后面解释</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="js/impress.js"></script>
+        <script>impress().init();</script>
+    </body>
+</html>
