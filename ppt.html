@@ -21,6 +21,8 @@
         <style type="text/css">
             html{
                 background: #FDFDFC;
+                font-family: "微软雅黑";
+                font-size: 20px;
             }
             .slide{
                 width: 750px;
@@ -60,7 +62,7 @@
             .content .cur{
                 font-size: 30px;
                 padding: 25px;
-                color:#fe0000;
+                font-weight: bold;
             }
             .font3{
                 font-size: 24px;
@@ -72,7 +74,16 @@
                 font-weight: bold;
                 text-align: center;
             }
-
+            p{
+                font-family: "微软雅黑", "Arial Rounded MT Bold";
+                font-size: 20px;
+                line-height: 30px;
+            }
+            h2{
+                color: green;
+                font-family: "微软雅黑", "Arial Rounded MT Bold";
+            }
+             
         </style>
         <div id="impress">
 
@@ -90,14 +101,13 @@
                     <div class="span12"></div>
                 </div>
                 <h2 class = "center">Group Five<br>December 14, 2012</h2>
-                <h3 class="center"><strong >李冠贤, 梁展瑞 , 陈学家  ,李晋贤 , 何钰莹</strong></h3>	
+                <h3 class="center"><strong >李冠贤, 梁展瑞 , 陈学家  ,李晋贤 , 何钰莹</strong></h3> 
             </div>
-
 
             <!-- 介绍 -->
             <div  class="step slide" data-x="-1000" data-y="-1500">
                 <blockquote>
-                    <h2>CONTENT</h2>
+                    <h1>CONTENT</h1>
                 </blockquote>
                 <hr>
                 <div class="row-fluid">
@@ -110,22 +120,23 @@
                             <div class="item">Summary</div>
                         </div>
                     </div>
-                </div>		
+                </div>      
             </div>
 
             <!-- Object -->
             <div class="step slide" data-x="0" data-y="-1500">
                 <blockquote>
-                    <h2>Objective</h2>
+                    <h1>Object</h1>
                 </blockquote>
                 <hr>
                 <div class="row-fluid">
                     <div class="span10 offset1">
                         <p class="font3">
-                        &nbsp; &nbsp; There are plenty of advertising twitters such  
-                        as selling clothes, shoes, cosmetics and some  
-                        other products. Sometimes we want to ignore these  
-                        kinds of twitters.
+                            &nbsp; &nbsp; 
+                            由于微博的媒体特性， 微博成为了一个营销推广平台。 
+                            在微博当中我们可以看到，百分之四十左右的微博是广告，
+                            主要包括， 衣服， 鞋子， 护肤品， 食物等。 但其实是大多数时候
+                            我们并不关心这些微博， 我们想把这些广告微博筛除掉。。
                         </p>
                     </div>
                     <div class="row-fluid">
@@ -134,53 +145,59 @@
                         <div class="span12"></div>
                     </div>
                     <p class="font-large">
-                    ------ Object
+                        --- Object
                     </p>
                     <div class="span10 offset1">
-
+                        
                         <br>
-                        <h2 class="center">
-                            Advertisement Classification Based on Naive Bayes Classie
-                        </h2>
+                        <h3 class="center">
+                            基于贝叶斯的广告分类系统  
+                        </h3>
                     </div>
                 </div>
             </div>
 
             <!-- design -->
-            <div class="step slide bdr" data-x="1000" data-y="-1500">
+            <div class="step slide " data-x="1000" data-y="-1500">
                 <blockquote>
-                    <h2>Analysis And Design</h2>
+                    <h1>Analysis And Design</h1>
                 </blockquote>
                 <hr>
                 <div class="row-fluid">
                     <div class="span10 offset1">
-
+                        
                     </div>
                 </div>
                 <div class="row-fluid">
                     <div class="span10 offset1">
-
+                        
                     </div>
                 </div>
             </div>
 
             <!--Algorithm-->
-            <div class="step slide bdr" data-x="1800" data-y="-1500">
+            <div class="step slide " data-x="2000" data-y="-1500">
                 <blockquote>
                     <h1> Naive Bayes Classifier </h1>
                 </blockquote>
                 <hr>
-                <h2>功能</h2>
-                <p>根据从条目中提取的特征量, 利用知识库基于概率猜测条目最可能属于的分类</p>
-                <h2>前期准备</h2>
-                <p> 人工分类得出知识库, 预先定义好特征集 </p>
-                <h2>原理</h2>
-                <p>
-                将分类器看成一个函数 $ y = f(X) $, 其中y为得到的分类, $ X = \{a_1, a_2, \cdots, a_m \} $
-                为特征集.
-                </p>
-                <p>
-                </p>
+                <div class="row-fluid">
+                    <div class="span10 offset1">
+                        <h2>功能</h2>
+                        <p>根据从条目中提取的特征量, 利用知识库基于概率猜测条目最可能属于的分类</p>
+                        <br>
+
+                        <h2>前期准备</h2>
+                        <p> 人工分类得出知识库, 预先定义好特征集 </p>
+                        <br>
+
+                        <h2>原理</h2>
+                        <p>
+                        将分类器看成一个函数 $ i = f(X) $, 其中i为得到的分类, $ X = \{a_1, a_2, \cdots, a_m \} $
+                        为特征集.
+                        </p>
+                    </div>
+                </div>     
             </div>
 
             <!--分类-->
@@ -192,7 +209,7 @@
                 <div class="row-fluid">
                     <div class="span4">
                         <table class="table table-bordered table-hover table-striped table-condensed">
-                            <caption>属性集</caption>
+                            <caption><h2>属性集</h2> <br></caption>
                             <thead>
                                 <tr> <th>属性名</th> <th>意义</th> </tr>
                             </thead>
@@ -223,7 +240,7 @@
                         -->
 
                         <table class="table table-bordered table-hover table-striped">
-                            <caption>分类</caption>
+                            <caption><h2>分类</h2> <br></caption>
                             <thead>
                                 <tr><td>数值类型</td><td>包括</td><td>处理方法</td></tr>
                             </thead>
@@ -256,6 +273,8 @@
                 \[ log(P(ws|Y_i)) = log(\prod_{j=1}^p w_j/|Yi|^p) \]
                 </p>
             </div>
+            
+            
 
         </div>
         <script src="js/impress.js"></script>
