@@ -175,6 +175,7 @@
                 </div>
             </div>
 
+            <!--start-->
             <!--Algorithm-->
             <div class="step slide " data-x="2000" data-y="-1500">
                 <blockquote>
@@ -304,11 +305,39 @@
             
             <div class="step slide bdr" data-x="-200" data-y="-2400">
                 <blockquote>
-                    <h2>integer类型的计算方法 </h2>
+                    <h2>integer类型属性的计算方法 </h2>
                 </blockquote>
                 <hr>
+                <div class="row-fluid">
+
+                <div class="span6">
+                    <h3>问题</h3>
+                    <p>
+                    求$P(a_j|Y_i)$, 其中a_j为事件, 例如: 事件回复数是30. 
+                    $Y_i$表示这个条目属于分类$i$这个事件.
+                    </p>
+                    <h3>解决</h3>
+                    <p>
+                    将所有统计的条目的对应量单独提取出来,记为
+                    $ S= [v_1, v_2, \cdots, v_n ] $. 再进行同值合并计数.
+                    $ M = [(v_1, c_1), (v_2, c_2), \cdots, (v_m, c_m)] $
+                    $(v_k, c_k)$ 表示 $v_k$ 在$S$中出现$c_k$次.
+                    </p>
+                </div>
+                <div class="span6">
+                    <img src="plot-intpForward-yset-1.png">
+                    <div style="text-align:center"> 
+                        Interpolated and smoothed forward_num PDF function</div>
+                </div>
+                </div>
+                <h3>难点</h3>
+                <p>
+                统计数据量不够大, $M$中不一定含有所有$v_k$. 用插值解决.
+                插值后数据波动较大, 这用区间积分后再取平均值解决.
+                </p>
             </div>
-            
+
+            <!--end-->
 
         </div>
         <script src="js/impress.js"></script>
