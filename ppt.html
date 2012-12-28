@@ -176,16 +176,17 @@
                 <p> 人工分类得出知识库, 预先定义好特征集 </p>
                 <h2>原理</h2>
                 <p>
-                将分类器看成一个函数 $ i = f(X) $, 其中i为得到的分类, $ X = \{a_1, a_2, \cdots, a_m \} $
+                将分类器看成一个函数 $ y = f(X) $, 其中y为得到的分类, $ X = \{a_1, a_2, \cdots, a_m \} $
                 为特征集.
                 </p>
-
+                <p>
+                </p>
             </div>
 
             <!--分类-->
             <div class="step slide bdr" data-x="1800" data-y="-2400">
                 <blockquote>
-                    <h1> 分类</h1>
+                    <h1> 属性分类</h1>
                 </blockquote>
                 <hr>
                 <div class="row-fluid">
@@ -236,6 +237,24 @@
                         </table>
                     </div>
                 </div>
+            </div>
+
+            <!--不同分类的处理方法 -->
+            <div class="step slide bdr" data-x="800" data-y="-2400">
+                <blockquote>
+                    <h1>不同分类的处理方法 </h1>
+                </blockquote>
+                <hr>
+                <h2> 直接计数 </h2>
+                <p>
+                计算知识库中有多少条目有相同的对应值. 例如 date=15, 而训练集中有200条的date也是15, 那么计数值就是200.
+                </p>
+                <h2> Word list的特殊处理 </h2>
+                <p>
+                word list的形式: 
+                \[ ws = {w_1, w_2, w_3, ..., w_p} \]
+                \[ log(P(ws|Y_i)) = log(\prod_{j=1}^p w_j/|Yi|^p) \]
+                </p>
             </div>
 
         </div>
