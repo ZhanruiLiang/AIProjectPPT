@@ -199,6 +199,33 @@
                     </div>
                 </div>     
             </div>
+            <div class="step slide " data-x="3000" data-y="-1500">
+                <blockquote>
+                    <h1> Naive Bayes Classifier </h1>
+                </blockquote>
+                <hr>
+                <div class="row-fluid">
+                    <div class="span10 offset1">
+                        <h2>原理</h2>
+                        <p>
+                        \[
+                        P(Y_i|X)  = \frac{P(X | Y_i) P(Y_i)}{P(X)} 
+                        \]
+                        其中$Y_i$表示这个条目属于第$i$个集合
+
+                        \[
+                        P(X | Y_i) P(Y_i) = P(a_1 a_2 \cdots a_m | Y_i) P(Y_i) \\
+                        =  P(a_1|Y_i)P(a_2|Y_i)\cdots.P(a_m|Y_i) P(Y_i) \\
+                        =  e^{\sum_{j=1}^m \ln(P(a_j|Y_i))}
+                        \]
+                        转化为计算log值是由于计算机中log值相加的精度比直接计算乘积的精度高,速度快.
+                        </p>
+                        <p>
+                        对不同的属性(特征)$a_j$, $P(a_j|Y_i)$ 有不同的计算方法.
+                        </p>
+                    </div>
+                </div>     
+            </div>
 
             <!--分类-->
             <div class="step slide bdr" data-x="1800" data-y="-2400">
@@ -269,11 +296,18 @@
                 <h2> Word list的特殊处理 </h2>
                 <p>
                 word list的形式: 
-                \[ ws = {w_1, w_2, w_3, ..., w_p} \]
-                \[ log(P(ws|Y_i)) = log(\prod_{j=1}^p w_j/|Yi|^p) \]
+                \[ ws = \{w_1, w_2, w_3, ..., w_p \} \]
+                一个word list的最终贡献值
+                \[ \log(P(ws|Y_i)) = \log(\frac{\prod_{j=1}^p Count(w_j)}{|Yi|^p}) \]
                 </p>
             </div>
             
+            <div class="step slide bdr" data-x="-200" data-y="-2400">
+                <blockquote>
+                    <h2>integer类型的计算方法 </h2>
+                </blockquote>
+                <hr>
+            </div>
             
 
         </div>
